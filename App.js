@@ -77,6 +77,7 @@ export default class TodoList extends Component {
         <FlatList
           style={styles.list}
           data={this.state.tasks}
+          keyExtractor={(item) => item.key.toString()}
           renderItem={({ item, index }) =>
             <View>
               <View style={styles.listItemCont}>
